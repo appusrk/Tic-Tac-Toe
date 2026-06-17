@@ -1,0 +1,181 @@
+/* Basic reset */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { height: 100%; }
+body {
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  line-height: 1.4;
+  color: #1f2937;
+  background: #f7fafc;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Layout */
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1rem;
+  background: #ffffff;
+  border-bottom: 1px solid #e6edf3;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+header .muted { color: #6b7280; font-size: 0.95rem; }
+
+/* Nav */
+nav[aria-label="Main"] {
+  display: flex;
+  gap: 0.75rem;
+  align-items: center;
+}
+nav a {
+  text-decoration: none;
+  color: #f2cf6f;
+  padding: 0.45rem 0.6rem;
+  border-radius: 6px;
+}
+nav a:hover {
+  background: #eef2f7;
+}
+
+/* Main container: 2-column on wide, single column on narrow */
+.container {
+  max-width: 1100px;
+  margin: 1.25rem auto;
+  padding: 0 1rem;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 1rem;
+  align-items: start;
+}
+
+/* Card utility */
+.card {
+  background: #ffffff;
+  padding: 1rem;
+  border-radius: 10px;
+  border: 1px solid #e6edf3;
+  box-shadow: 0 6px 18px rgba(15, 23, 42, 0.03);
+}
+
+/* Small header inside cards */
+.small-header { display:flex; justify-content:space-between; align-items:center; gap:0.5rem; }
+
+/* Form styles */
+form { display:flex; flex-direction:column; gap:0.75rem; }
+label { display:block; font-size:0.95rem; color: #374151; margin-bottom: 0.25rem; }
+input[type="text"], input[type="email"], select, textarea {
+  width: 100%;
+  padding: 0.6rem;
+  border-radius: 8px;
+  border: 1px solid #e6edf3;
+  background: #fff;
+  color: #111827;
+  font-size: 0.95rem;
+}
+textarea { min-height: 100px; resize: vertical; }
+button[type="submit"], button[type="reset"] {
+  padding: 0.55rem 0.75rem;
+  border-radius: 8px;
+  border: none;
+  background: #0ea5a4;
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+}
+button.ghost {
+  background: transparent;
+  border: 1px solid #e6edf3;
+  color: #374151;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 1rem;
+  background: #eee;
+}
+
+/* Utility muted text */
+.muted { color: #6b7280; }
+
+/* Responsive adjustments */
+@media (max-width: 900px) {
+  .container {
+    grid-template-columns: 1fr;
+  }
+  nav[aria-label="Main"] {
+    display: none; /* simple approach for small screens */
+  }
+}
+
+/* Small accessibility improvements */
+button:focus, input:focus, textarea:focus, select:focus {
+  outline: 3px solid rgba(14,165,164,0.15);
+  outline-offset: 2px;
+}
+/* Tic Tac Toe*/
+body { 
+    font-family: 'Poppins', sans-serif;
+      color: #000000;  }  
+h1 {  text-align: center;  }
+#board {  
+    margin-left: auto; 
+    margin-right: auto; 
+    width: 375px; 
+    height: 375px;  
+    display: grid;  
+    grid-template-columns: repeat(3, 1fr);  
+    grid-gap: 5px;  }    
+.square {  
+    width: 120px;  
+    height: 120px;  
+    border: 1px solid #D3D3D3;  
+    background-color: #ee9292;  
+    font-size: 40px;  
+    display: flex;  
+    justify-content: center;  
+    align-items: center;  }    
+.square:hover {  
+    background-color: #FFFFE0;  }
+#restartButton { 
+     display: block;  
+     margin-left: auto;  
+     margin-right: auto;  
+     height: 40px;  
+     width: 150px;  
+     background-color: #FFFFFF;  
+     border: 1px solid #000000;  
+     border-radius: 40px;  
+     font-size: 18px;  }    
+#restartButton:hover {  
+    background-color: #f01d1d;  
+    color: #FFFFFF;  }
+    body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  transition: background 0.3s, color 0.3s;
+}
+
+/* Dark mode class */
+.dark-mode {
+  background-color: #121212;
+  color: white;
+}
+
+header {
+  padding: 1rem;
+  background: #0b5ed7;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
