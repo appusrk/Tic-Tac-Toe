@@ -18,11 +18,20 @@
         transition:0.3s;
     }
 
-    header{
-        padding:1rem;
-        background:#0b5ed7;
-        color:white;
-    }
+    header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1rem;
+  background: #ffffff;
+  border-bottom: 1px solid #e6edf3;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+header .muted { color: #6b7280; font-size: 0.95rem; }
 
     header h1{
         text-align:center;
@@ -64,8 +73,8 @@
     .card{
         background:white;
         border-radius:12px;
-        padding:20px;
-        margin-bottom:15px;
+        padding:10px;
+        margin-bottom:10px;
         box-shadow:0 2px 10px rgba(0,0,0,0.1);
         text-align:center;
     }
