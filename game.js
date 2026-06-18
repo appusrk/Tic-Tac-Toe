@@ -125,14 +125,13 @@ function restartButton() {
 
     currentPlayer = players[0];
     endMessage.textContent = `X's turn!`;
-}            }
+
             currentPlayer = (currentPlayer === players[0]) ? players[1] : players[0] 
             if(currentPlayer == players[0]) {
                   endMessage.textContent= `X's turn!`
             } else {
                   endMessage.textContent= `O's turn!`
-            }       
-      })    
+            }           
 }
 function checkWin(currentPlayer) {
       for(let i = 0; i < winning_combinations.length; i++){
