@@ -148,7 +148,7 @@ h1 {  text-align: center;  }
      margin-right: auto;  
      height: 40px;  
      width: 150px;  
-     background-color: #FFFFFF;  
+     background-color: #ee5959;  
      border: 1px solid #000000;  
      border-radius: 40px;  
      font-size: 18px;  }    
@@ -166,7 +166,7 @@ h1 {  text-align: center;  }
 
 /* Dark mode class */
 .dark-mode {
-  background-color: #121212;
+  background-color: #454545;
   color: white;
 }
 

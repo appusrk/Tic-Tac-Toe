@@ -133,12 +133,12 @@ footer{
 /* Dark Mode */
 
 .dark-mode{
-    background:#121212;
+    background:#454545;
     color:white;
 }
 
 .dark-mode footer{
-    background:#1e1e1e;
+    background:#5a5959;
     color:white;
 }
 

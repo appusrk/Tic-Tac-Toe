@@ -31,10 +31,6 @@ const winning_combinations = [
 
 showPopup("Welcome! Click the Play button to start 🎮");
 
-setTimeout(() => {
-    showPopup("Player X Starts ❌");
-}, 2000);
-
 for (let i = 0; i < squares.length; i++) {
 
 squares[i].addEventListener('click', () => {
