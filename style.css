@@ -1,40 +1,180 @@
-/* Basic reset */
-* { box-sizing: border-box; margin: 0; padding: 0; }
-html, body { height: 100%; }
+/* ===== Reset ===== */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    height: 100%;
+}
+
+/* ===== Body ===== */
 body {
-  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
-  line-height: 1.4;
-  color: #1f2937;
-  background: #f7fafc;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+    font-family: 'Poppins', sans-serif;
+    color: #000;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background: #f7fafc;
+    transition: background 0.3s, color 0.3s;
 }
 
-/* Layout */
+/* ===== Dark Mode ===== */
+.dark-mode {
+    background-color: #454545;
+    color: white;
+}
+
+/* ===== Header ===== */
 header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 1rem;
-  padding: 1rem;
-  background: #ffffff;
-  border-bottom: 1px solid #e6edf3;
-  position: sticky;
-  top: 0;
-  z-index: 10;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background: #708cef;
+    color: white;
+    border-bottom: 1px solid #e6edf3;
 }
 
-header .muted { color: #6b7280; font-size: 0.95rem; }
-
-/* Nav */
-nav[aria-label="Main"] {
-  display: flex;
-  gap: 0.75rem;
-  align-items: center;
+header h1 {
+    margin: 0;
 }
-nav a {
-  text-decoration: none;
-  color: #f2cf6f;
+
+/* ===== Navigation ===== */
+nav {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.nav-links a:hover {
+    text-decoration: underline;
+}
+
+#themeToggle {
+    padding: 8px 12px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+/* ===== Title ===== */
+#title {
+    text-align: center;
+    margin: 20px 0;
+}
+
+/* ===== Game Board ===== */
+#board {
+    width: 375px;
+    height: 375px;
+    margin: 20px auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 5px;
+}
+
+.square {
+    width: 120px;
+    height: 120px;
+    border: 1px solid #d3d3d3;
+    background-color: #ee9292;
+    font-size: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.square:hover {
+    background-color: #ffffe0;
+}
+
+/* ===== Restart Button ===== */
+#endGame {
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 60px;
+}
+
+#restartButton {
+    width: 170px;
+    height: 45px;
+    background-color: #ee5959;
+    border: 1px solid #000;
+    border-radius: 40px;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+#restartButton:hover {
+    background-color: #f01d1d;
+    color: white;
+}
+
+/* ===== Popup ===== */
+#popupMessage {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    min-width: 400px;
+    max-width: 600px;
+
+    background: rgba(0, 0, 0, 0.55);
+    color: white;
+
+    padding: 25px 50px;
+    border-radius: 15px;
+
+    font-size: 28px;
+    font-weight: bold;
+    text-align: center;
+
+    display: none;
+    z-index: 1000;
+
+    backdrop-filter: blur(8px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* ===== Footer ===== */
+footer {
+    text-align: center;
+    padding: 1rem;
+    background: #eee;
+    margin-top: auto;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 480px) {
+
+    #board {
+        width: 300px;
+        height: 300px;
+    }
+
+    .square {
+        width: 96px;
+        height: 96px;
+        font-size: 32px;
+    }
+
+    #popupMessage {
+        min-width: 280px;
+        font-size: 22px;
+        padding: 20px;
+    }
+}  color: #f2cf6f;
   padding: 0.45rem 0.6rem;
   border-radius: 6px;
 }
