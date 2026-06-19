@@ -29,7 +29,11 @@ const winning_combinations = [
 [2, 4, 6]
 ];
 
-showPopup("X's Turn");
+showPopup("Welcome! Click the Play button to start 🎮");
+
+setTimeout(() => {
+    showPopup("Player X Starts ❌");
+}, 2000);
 
 for (let i = 0; i < squares.length; i++) {
 
