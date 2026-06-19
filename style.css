@@ -1,4 +1,3 @@
-/* ===== Reset ===== */
 * {
     box-sizing: border-box;
     margin: 0;
@@ -9,7 +8,6 @@ html, body {
     height: 100%;
 }
 
-/* ===== Body ===== */
 body {
     font-family: 'Poppins', sans-serif;
     color: #000;
@@ -173,15 +171,14 @@ footer {
         min-width: 280px;
         font-size: 22px;
         padding: 20px;
-    }
-}  color: #f2cf6f;
+      color: #f2cf6f;
   padding: 0.45rem 0.6rem;
   border-radius: 6px;
 }
 nav a:hover {
   background: #eef2f7;
 }
-
+}
 /* Main container: 2-column on wide, single column on narrow */
 .container {
   max-width: 1100px;
@@ -253,7 +250,6 @@ footer {
   }
 }
 
-/* Small accessibility improvements */
 button:focus, input:focus, textarea:focus, select:focus {
   outline: 3px solid rgba(14,165,164,0.15);
   outline-offset: 2px;

@@ -5,7 +5,7 @@ const players = ['X', 'O'];
 let currentPlayer = players[0];
 
 let someoneWon = false;
-
+let gameStarted = false;
 function showPopup(message) {
 const popup = document.getElementById("popupMessage");
 
@@ -14,7 +14,7 @@ popup.style.display = "block";
 
 setTimeout(() => {
     popup.style.display = "none";
-}, 1500);
+}, 1000);
 
 }
 
@@ -35,7 +35,8 @@ for (let i = 0; i < squares.length; i++) {
 
 squares[i].addEventListener('click', () => {
 
-    if (someoneWon) return;
+    if (!gameStarted) {
+        showPopup("Click Play/Restart to start🎮"); return;}
 
     if (squares[i].textContent !== '') {
         return;
@@ -47,6 +48,7 @@ squares[i].addEventListener('click', () => {
     if (checkWin(currentPlayer)) {
 
         someoneWon = true;
+        board.style.pointerEvents="none";
 
         if (currentPlayer === 'X') {
 
@@ -69,6 +71,7 @@ squares[i].addEventListener('click', () => {
     if (checkTie()) {
 
         someoneWon = true;
+        board.style.pointerEvents="none";
 
         let draws = parseInt(localStorage.getItem("draws")) || 0;
         localStorage.setItem("draws", draws + 1);
@@ -127,7 +130,9 @@ return true;
 function restartButton() {
 
 someoneWon = false;
+gameStarted=true;
 
+board.style.pointerEvents="auto";
 for (let i = 0; i < squares.length; i++) {
     squares[i].textContent = "";
 }
